@@ -1,0 +1,269 @@
+{
+  "project": {
+    "name": "Vionne Premium E-commerce Store",
+    "goal": "Build a luxury modern e-commerce platform with premium brand identity, product showcase, checkout system, admin dashboard, and order notification system."
+  },
+
+  "tech_stack": {
+    "frontend": ["Next.js 14", "React", "TailwindCSS", "Framer Motion"],
+    "backend": ["Node.js", "Express"],
+    "database": "MongoDB",
+    "payments": ["Stripe", "Razorpay", "Cash on Delivery"],
+    "email": ["Nodemailer"],
+    "hosting": {
+      "frontend": "Vercel",
+      "backend": "Railway or Render"
+    }
+  },
+
+  "brand_identity": {
+    "brand_name": "Vionne",
+    "tone": ["Luxury", "Minimal", "Premium", "Modern"],
+    "colors": {
+      "primary": "#0B0B0B",
+      "secondary": "#F5F2EB",
+      "accent": "#C9A96A"
+    },
+    "typography": {
+      "heading": "Playfair Display",
+      "body": "Inter"
+    }
+  },
+
+  "logo": {
+    "placement": [
+      "Navbar left",
+      "Hero section",
+      "Footer"
+    ],
+    "rules": [
+      "Maintain aspect ratio",
+      "Subtle hover animation",
+      "Support light and dark backgrounds"
+    ]
+  },
+
+  "pages": [
+    "Home",
+    "Product Page",
+    "Cart",
+    "Checkout",
+    "Order Confirmation",
+    "Admin Dashboard"
+  ],
+
+  "home_page": {
+    "hero": {
+      "headline": "Welcome to Vionne",
+      "subtext": "Where Style Meets Innovation",
+      "cta": "Shop Now"
+    },
+
+    "sections": [
+      "Product Slider",
+      "Featured Product",
+      "Brand Story",
+      "Benefits",
+      "Newsletter",
+      "Footer"
+    ],
+
+    "benefits": [
+      "Premium Quality",
+      "Fast Delivery",
+      "Secure Checkout",
+      "Easy Returns"
+    ]
+  },
+
+  "product_page": {
+    "features": [
+      "Image slider",
+      "Zoom on hover",
+      "Product description",
+      "Features list",
+      "Specifications",
+      "Add to cart",
+      "Buy now",
+      "Related products"
+    ]
+  },
+
+  "cart_system": {
+    "features": [
+      "Add product",
+      "Remove product",
+      "Update quantity",
+      "Live price update",
+      "Continue shopping",
+      "Checkout button"
+    ]
+  },
+
+  "checkout": {
+    "layout": "Two column layout",
+    "customer_fields": [
+      "Full Name",
+      "Email",
+      "Phone",
+      "Address",
+      "City",
+      "State",
+      "Postal Code",
+      "Country"
+    ],
+    "payment_methods": [
+      "Cash on Delivery",
+      "Stripe",
+      "Razorpay"
+    ]
+  },
+
+  "order_system": {
+    "order_id_format": "VIO-XXXXXXX",
+    "database": "MongoDB",
+
+    "email_notification": {
+      "trigger": "When order placed",
+      "send_to": "Admin Email",
+      "include": [
+        "Customer Name",
+        "Phone",
+        "Address",
+        "Products",
+        "Quantity",
+        "Total Price",
+        "Order ID",
+        "Date Time"
+      ]
+    }
+  },
+
+  "admin_dashboard": {
+    "authentication": "Secure Admin Login",
+
+    "product_management": [
+      "Add product",
+      "Upload images",
+      "Edit product",
+      "Delete product"
+    ],
+
+    "order_management": [
+      "View orders",
+      "Customer details",
+      "Update order status"
+    ],
+
+    "analytics": [
+      "Total orders",
+      "Revenue stats",
+      "Top products"
+    ],
+
+    "settings": [
+      "Edit homepage text",
+      "Update prices",
+      "Manage products"
+    ]
+  },
+
+  "ui_ux": {
+    "design_style": "Apple-style minimal luxury",
+    "features": [
+      "Sticky navbar",
+      "Smooth page transitions",
+      "Hover animations",
+      "Lazy loading images",
+      "Premium spacing",
+      "Rounded components",
+      "Soft shadows",
+      "Fast loading"
+    ],
+    "responsive": true
+  },
+
+  "seo": {
+    "features": [
+      "Meta titles",
+      "Meta descriptions",
+      "Schema markup",
+      "Image alt tags",
+      "Optimized loading speed"
+    ]
+  },
+
+  "database_models": {
+
+    "product": {
+      "name": "string",
+      "description": "string",
+      "price": "number",
+      "images": "array",
+      "features": "array",
+      "specifications": "object",
+      "stock": "number"
+    },
+
+    "order": {
+      "order_id": "string",
+      "customer": {
+        "name": "string",
+        "email": "string",
+        "phone": "string",
+        "address": "string",
+        "city": "string",
+        "state": "string",
+        "postal_code": "string",
+        "country": "string"
+      },
+      "products": [
+        {
+          "product_id": "string",
+          "name": "string",
+          "price": "number",
+          "quantity": "number"
+        }
+      ],
+      "total_price": "number",
+      "payment_method": "string",
+      "status": "Pending",
+      "created_at": "datetime"
+    }
+  },
+
+  "project_structure": {
+    "frontend": [
+      "app/",
+      "components/",
+      "styles/",
+      "utils/",
+      "public/"
+    ],
+
+    "backend": [
+      "controllers/",
+      "routes/",
+      "models/",
+      "middleware/",
+      "services/"
+    ]
+  },
+
+  "environment_variables": {
+    "MONGO_URI": "mongodb connection string",
+    "STRIPE_SECRET_KEY": "stripe secret",
+    "RAZORPAY_KEY": "razorpay key",
+    "RAZORPAY_SECRET": "razorpay secret",
+    "EMAIL_USER": "smtp email",
+    "EMAIL_PASS": "smtp password",
+    "ADMIN_EMAIL": "admin notification email",
+    "NEXT_PUBLIC_API_URL": "backend api url"
+  },
+
+  "deployment": {
+    "frontend": "Deploy Next.js to Vercel",
+    "backend": "Deploy Express server to Railway or Render",
+    "database": "MongoDB Atlas"
+  }
+}
